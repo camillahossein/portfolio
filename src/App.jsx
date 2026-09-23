@@ -3,16 +3,36 @@ import { Suspense } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Preloader from './components/UIElements/Preloader/Preloader';
 
+// =====================================================
+// IMAGENS
+// =====================================================
+
+import camilla from './icons/camilla.jpg';
+import henrique from './icons/henrique.jpg';
+import gabriel from './icons/gabriel.jpg';
+import artemis from './icons/artemis.jpg';
+import artesanato from './icons/artesanato.png';
+
+
 const App = () => {
   return (
     <Suspense fallback={<Preloader />}>
+
       <Router>
+
         <main className="portfolio-page">
 
           {/* =====================================================
               HERO
           ===================================================== */}
+
           <section className="portfolio-hero" id="inicio">
+
+            <img
+              src={camilla}
+              alt="Camilla Hossein"
+              className="portfolio-hero-image"
+            />
 
             <div className="portfolio-hero-overlay" />
 
@@ -35,7 +55,10 @@ const App = () => {
 
               <div className="portfolio-buttons">
 
-                <a href="#sobre" className="portfolio-btn primary">
+                <a
+                  href="#sobre"
+                  className="portfolio-btn primary"
+                >
                   Conheça minha história
                 </a>
 
@@ -62,7 +85,11 @@ const App = () => {
           {/* =====================================================
               SOBRE MIM
           ===================================================== */}
-          <section className="portfolio-section about-section" id="sobre">
+
+          <section
+            className="portfolio-section about-section"
+            id="sobre"
+          >
 
             <div className="portfolio-section-label">
               01 — SOBRE MIM
@@ -71,10 +98,12 @@ const App = () => {
             <div className="about-grid">
 
               <div>
+
                 <h2>
                   Muito além do
                   <span> currículo.</span>
                 </h2>
+
               </div>
 
               <div className="about-text">
@@ -95,9 +124,11 @@ const App = () => {
 
                 <p>
                   Minha formação em
-                  <strong> Análise e Desenvolvimento de Sistemas </strong>
-                  me deu uma base técnica, mas minha experiência me
-                  ensinou que tecnologia também é sobre comunicação,
+                  <strong>
+                    {' '}Análise e Desenvolvimento de Sistemas
+                  </strong>
+                  {' '}me deu uma base técnica, mas minha experiência
+                  me ensinou que tecnologia também é sobre comunicação,
                   colaboração e entender pessoas.
                 </p>
 
@@ -122,7 +153,11 @@ const App = () => {
           {/* =====================================================
               JORNADA PROFISSIONAL
           ===================================================== */}
-          <section className="portfolio-section journey-section" id="jornada">
+
+          <section
+            className="portfolio-section journey-section"
+            id="jornada"
+          >
 
             <div className="portfolio-section-label">
               02 — MINHA JORNADA
@@ -133,11 +168,11 @@ const App = () => {
               <span> produto.</span>
             </h2>
 
-
             <div className="portfolio-timeline">
 
 
-              {/* Formação */}
+              {/* FORMAÇÃO */}
+
               <div className="timeline-item">
 
                 <div className="timeline-year">
@@ -165,7 +200,8 @@ const App = () => {
               </div>
 
 
-              {/* Desenvolvimento */}
+              {/* DESENVOLVIMENTO */}
+
               <div className="timeline-item">
 
                 <div className="timeline-year">
@@ -185,10 +221,12 @@ const App = () => {
                   </p>
 
                   <div className="mini-tags">
+
                     <span>JavaScript</span>
                     <span>React</span>
                     <span>TypeScript</span>
                     <span>Node.js</span>
+
                   </div>
 
                 </div>
@@ -196,7 +234,8 @@ const App = () => {
               </div>
 
 
-              {/* Produto */}
+              {/* PRODUTO */}
+
               <div className="timeline-item">
 
                 <div className="timeline-year">
@@ -221,11 +260,13 @@ const App = () => {
                   </p>
 
                   <div className="mini-tags">
+
                     <span>Product Owner</span>
                     <span>Product Manager</span>
                     <span>Scrum</span>
                     <span>Kanban</span>
                     <span>Jira</span>
+
                   </div>
 
                 </div>
@@ -233,7 +274,8 @@ const App = () => {
               </div>
 
 
-              {/* Petrobras */}
+              {/* PETROBRAS */}
+
               <div className="timeline-item current">
 
                 <div className="timeline-year">
@@ -278,7 +320,11 @@ const App = () => {
           {/* =====================================================
               FAMÍLIA
           ===================================================== */}
-          <section className="portfolio-section family-section" id="familia">
+
+          <section
+            className="portfolio-section family-section"
+            id="familia"
+          >
 
             <div className="portfolio-section-label">
               03 — MINHA FAMÍLIA
@@ -287,10 +333,12 @@ const App = () => {
             <div className="family-intro">
 
               <div>
+
                 <h2>
                   Meu maior
                   <span> projeto.</span>
                 </h2>
+
               </div>
 
               <p>
@@ -303,11 +351,13 @@ const App = () => {
 
             <div className="family-grid">
 
-              {/* Henrique */}
+
+              {/* HENRIQUE */}
+
               <article className="family-card">
 
                 <img
-                  src="/images/henrique.jpg"
+                  src={henrique}
                   alt="Camilla e Henrique"
                 />
 
@@ -334,11 +384,12 @@ const App = () => {
               </article>
 
 
-              {/* Gabriel */}
+              {/* GABRIEL */}
+
               <article className="family-card">
 
                 <img
-                  src="/images/gabriel.jpg"
+                  src={gabriel}
                   alt="Camilla e Gabriel"
                 />
 
@@ -371,7 +422,11 @@ const App = () => {
           {/* =====================================================
               HOBBIES
           ===================================================== */}
-          <section className="portfolio-section hobbies-section" id="hobbies">
+
+          <section
+            className="portfolio-section hobbies-section"
+            id="hobbies"
+          >
 
             <div className="portfolio-section-label">
               04 — FORA DO TRABALHO
@@ -386,7 +441,8 @@ const App = () => {
             <div className="hobbies-grid">
 
 
-              {/* Artemis */}
+              {/* ARTEMIS */}
+
               <article className="hobby-card">
 
                 <div className="hobby-number">
@@ -418,11 +474,12 @@ const App = () => {
               </article>
 
 
-              {/* Artesanato */}
+              {/* ARTESANATO */}
+
               <article className="hobby-card craft-card">
 
                 <img
-                  src="/images/artesanato.png"
+                  src={artesanato}
                   alt="Artesanato feito por Camilla"
                 />
 
@@ -449,7 +506,8 @@ const App = () => {
               </article>
 
 
-              {/* Games */}
+              {/* VIDEOGAMES */}
+
               <article className="hobby-card game-card">
 
                 <div className="hobby-number">
@@ -492,21 +550,25 @@ const App = () => {
 
 
           {/* =====================================================
-              ARTEMIS / MÚSICA
+              MÚSICA / ARTEMIS
           ===================================================== */}
-          <section className="portfolio-section music-section" id="musica">
+
+          <section
+            className="portfolio-section music-section"
+            id="musica"
+          >
 
             <div className="portfolio-section-label">
               05 — MÚSICA
             </div>
 
-
             <div className="music-grid">
+
 
               <div className="music-image">
 
                 <img
-                  src="/images/artemis.jpg"
+                  src={artemis}
                   alt="Camilla com a banda Artemis"
                 />
 
@@ -545,7 +607,8 @@ const App = () => {
             </div>
 
 
-            {/* YouTube */}
+            {/* VÍDEO */}
+
             <div className="video-container">
 
               <div className="video-title">
@@ -572,6 +635,7 @@ const App = () => {
           {/* =====================================================
               CURIOSIDADES
           ===================================================== */}
+
           <section
             className="portfolio-section curiosities-section"
             id="curiosidades"
@@ -669,7 +733,6 @@ const App = () => {
 
               </article>
 
-
             </div>
 
           </section>
@@ -678,7 +741,11 @@ const App = () => {
           {/* =====================================================
               FUTURO
           ===================================================== */}
-          <section className="future-section" id="futuro">
+
+          <section
+            className="future-section"
+            id="futuro"
+          >
 
             <div className="future-content">
 
@@ -759,6 +826,7 @@ const App = () => {
           {/* =====================================================
               FOOTER
           ===================================================== */}
+
           <footer className="portfolio-footer">
 
             <div className="footer-content">
@@ -811,7 +879,9 @@ const App = () => {
           </footer>
 
         </main>
+
       </Router>
+
     </Suspense>
   );
 };
